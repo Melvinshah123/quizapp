@@ -25,7 +25,12 @@ public class QuestionController {
         return questionService.getQuestionsByCategory(category);
     }
 
+    @PostMapping("add")
     public String addQuestion(@RequestBody Question question){
-        return "Successful";
+        return questionService.addQuestion(question);
     }
 }
+
+//to be included in the notepad
+// GetMapping is used when we fetch data from the server
+// PostMapping is used when we want to send data to the server
